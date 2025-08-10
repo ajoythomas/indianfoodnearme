@@ -21,15 +21,18 @@ import '../styles/global.css';
       </div>
     </header>
 
-    <main class="w-full max-w-none m-0 p-0 h-[calc(100vh-64px)]">
+    <main id="mapRoot" class="w-screen h-[calc(100vh-64px)] overflow-hidden">
       <iframe
         title="Google Maps – Indian food near me"
-        class="block w-[100vw] h-full border-0"
-        style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);"
+        class="block w-full h-full border-0"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=indian%20food&output=embed"
       ></iframe>
     </main>
+    <style>
+      html, body { overflow-x: hidden; }
+      #mapRoot { width: 100vw; max-width: none; margin: 0; padding: 0; }
+    </style>
   </body>
 </html>
